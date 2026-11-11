@@ -1,6 +1,10 @@
 # awsdatabse
 
 Database name is : databasedemo  
+useSSL=false
+CREATE DATABASE IF NOT EXISTS databasedemo;
+GRANT ALL PRIVILEGES ON databasedemo.* TO 'adminuser1'@'%';
+FLUSH PRIVILEGES;
 
 docker run -d -p 8080:8080 \
   -e DB_HOST="xxxxxxxxxxx.rds.amazonaws.com:3306" \
