@@ -2,8 +2,8 @@
 FROM eclipse-temurin:17-jdk-alpine AS build
 WORKDIR /app
 
-# Copy wrapper and build files
-mvnw pom.xml ./
+# Copy wrapper and build files correctly
+COPY mvnw pom.xml ./
 COPY .mvn .mvn
 COPY src src
 
